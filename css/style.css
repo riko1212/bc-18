@@ -22,6 +22,12 @@ h6 {
   margin: 0;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 ul,
 ol {
   margin: 0;
@@ -88,6 +94,11 @@ button {
   line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+  border: 1px solid var(--accent-color);
+  border-radius: 25px;
+  background-color: transparent;
+  min-width: 160px;
+  height: 40px;
 }
 
 /*-------------------- HEADER------------------------ */
@@ -95,6 +106,19 @@ button {
   background-color: gray;
   padding-top: 32px;
   padding-bottom: 32px;
+}
+
+.header-logo {
+  margin-right: 70px;
+}
+
+.header > .container {
+  display: flex;
+  align-items: center;
+}
+
+.header-list {
+  display: flex;
 }
 
 .header-link,
@@ -111,6 +135,10 @@ button {
   color: var(--accent-color);
 }
 
+.header-connect {
+  margin-left: auto;
+}
+
 /* .header-tel {
   font-weight: 600;
   font-size: 12px;
@@ -121,9 +149,21 @@ button {
 
 .header-btn {
   color: var(--first-btn-color);
+  margin-left: 40px;
+}
+
+.header-item:not(:last-child) {
+  margin-right: 40px;
 }
 
 /*-------------------- HERO------------------------ */
+
+.hero .container {
+  display: flex;
+}
+.hero-list {
+  width: 93px;
+}
 
 .hero-link {
   font-weight: 600;
@@ -141,6 +181,7 @@ button {
 .hero-content {
   background-color: #303030;
   padding: 272px 0 206px 96px;
+  flex-grow: 1;
 }
 
 .hero-pre-title {
@@ -168,9 +209,22 @@ button {
   padding-top: 140px;
   padding-bottom: 121px;
 }
+
+.about .container {
+  display: flex;
+}
+
+.about-list {
+  display: flex;
+  margin-right: 64px;
+}
 .about-pre-title {
   color: #303030;
   margin-bottom: var(--typical-mb);
+}
+
+.about-item + .about-item {
+  margin-left: 30px;
 }
 
 .about-title {
@@ -204,19 +258,33 @@ button {
 }
 .prices-pre-title {
   color: rgba(157, 164, 189, 0.6);
+  margin-bottom: var(--typical-mb);
 }
 
 .prices-title {
   color: var(--first-title-color);
+  margin-bottom: 44px;
+}
+
+.prices-wrap {
+  display: flex;
+  margin-bottom: 50px;
 }
 
 .prices-list {
   border: 1px solid #ffffff;
   padding: 30px 40px;
+  flex-grow: 1;
 }
 
 .prices-item {
   margin-bottom: var(--typical-mb);
+  display: flex;
+  justify-content: space-between;
+}
+
+.prices-item:last-child {
+  margin-bottom: 0;
 }
 
 .prices-item-text {
@@ -228,6 +296,8 @@ button {
 
 .prices-btn {
   color: var(--first-btn-color);
+  margin: 0 auto;
+  display: block;
 }
 
 /*-------------------- REASONS------------------------ */
@@ -278,11 +348,26 @@ button {
   padding-top: 130px;
   padding-bottom: 130px;
 }
-
 .masters-pre-title {
   color: #303030;
   margin-bottom: var(--typical-mb);
 }
+
+.masters-list {
+  display: flex;
+  margin-left: -30px;
+  flex-wrap: wrap;
+}
+
+.masters-item {
+  /* flex-basis: calc((100% - 90px) / 3); */
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+}
+
+/* .masters-item + .masters-item {
+  margin-left: 30px;
+} */
 
 .masters-title {
   color: var(--second-title-color);
@@ -322,8 +407,25 @@ button {
   margin-bottom: 44px;
 }
 
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
+}
+
+.gallery-item {
+  flex-basis: calc(100% / 4 - 30px);
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
 .contact-wrap {
   background-color: #303030;
+}
+
+.contact-wrap .container {
+  display: flex;
 }
 
 /*-------------------- ONLINE------------------------ */
@@ -331,6 +433,7 @@ button {
 .online {
   padding-top: 130px;
   padding-bottom: 130px;
+  flex-grow: 1;
 }
 .online-title {
   color: var(--first-title-color);
@@ -340,6 +443,7 @@ button {
 .contacts {
   padding-top: 130px;
   padding-bottom: 130px;
+  flex-grow: 1;
 }
 .contacts-title {
   color: var(--first-title-color);
