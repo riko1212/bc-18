@@ -72,6 +72,16 @@ button {
   line-height: 1.36;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+.pre-title::before {
+  content: "";
+  width: 63px;
+  height: 1px;
+  margin-right: 21px;
+  background-color: currentColor;
 }
 
 .section-title {
@@ -99,6 +109,11 @@ button {
   background-color: transparent;
   min-width: 160px;
   height: 40px;
+}
+
+.btn:hover {
+  background-color: var(--accent-color);
+  color: var(--first-btn-color);
 }
 
 /*-------------------- HEADER------------------------ */
@@ -180,6 +195,14 @@ button {
 
 .hero-content {
   background-color: #303030;
+  background-image: linear-gradient(
+      rgba(25, 28, 38, 0.2),
+      rgba(25, 28, 38, 0.2)
+    ),
+    url(../img/hero-bg.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   padding: 272px 0 206px 96px;
   flex-grow: 1;
 }
@@ -196,6 +219,16 @@ button {
   letter-spacing: 0.05em;
   color: var(--first-title-color);
   margin-bottom: var(--typical-mb);
+  display: flex;
+  align-items: baseline;
+}
+
+.hero-title:hover {
+  color: tomato;
+}
+
+.hero-title:hover::before {
+  background-color: teal;
 }
 
 .hero-after-title {
@@ -217,6 +250,7 @@ button {
 .about-list {
   display: flex;
   margin-right: 64px;
+  flex-shrink: 0;
 }
 .about-pre-title {
   color: #303030;
@@ -252,7 +286,13 @@ button {
 /*-------------------- PRICES------------------------ */
 
 .prices {
-  background-color: #303030;
+  background-image: url(../img/prices-bg.png);
+  background-color: #111319;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 1280px;
+  margin: 0 auto;
   padding-top: 130px;
   padding-bottom: 130px;
 }
@@ -272,15 +312,40 @@ button {
 }
 
 .prices-list {
-  border: 1px solid #ffffff;
   padding: 30px 40px;
   flex-grow: 1;
+}
+
+.prices-list-light {
+  background-image: linear-gradient(
+    180deg,
+    #171a24 0%,
+    rgba(23, 26, 36, 0.2) 100%
+  );
+}
+
+.prices-list-dark {
+  background-image: linear-gradient(
+    180deg,
+    #090b13 0%,
+    rgba(9, 11, 19, 0.2) 100%
+  );
 }
 
 .prices-item {
   margin-bottom: var(--typical-mb);
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
+}
+
+.prices-item::before {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.12);
+  margin-right: 6px;
+  margin-left: 6px;
 }
 
 .prices-item:last-child {
@@ -292,6 +357,10 @@ button {
   line-height: 30px;
   letter-spacing: 1.84;
   color: #9da4bd;
+}
+
+.prices-item-text:first-child {
+  order: -1;
 }
 
 .prices-btn {
@@ -334,6 +403,7 @@ button {
   color: #303030;
   margin-bottom: var(--typical-mb);
 }
+
 .reasons-title {
   color: #303030;
   margin-bottom: var(--typical-mb);
@@ -351,6 +421,10 @@ button {
 .masters-pre-title {
   color: #303030;
   margin-bottom: var(--typical-mb);
+}
+
+.masters-pre-title::before {
+  background-color: currentColor;
 }
 
 .masters-list {
@@ -394,7 +468,45 @@ button {
   text-align: center;
   letter-spacing: 0.02em;
   color: #ff6c00;
+  margin-bottom: 30px;
 }
+
+.masters-social-list {
+  display: flex;
+  justify-content: center;
+}
+
+.masters-social-item + .masters-social-item {
+  margin-left: 10px;
+}
+
+.masters-social-link {
+  width: 44px;
+  height: 44px;
+  background-color: teal;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--accent-color);
+}
+
+.masters-social-icon {
+  fill: currentColor;
+}
+
+.masters-social-link:hover {
+  background-color: var(--accent-color);
+  color: #ffffff;
+}
+
+/* .masters-social-link:hover {
+  background-color: var(--accent-color);
+}
+
+.masters-social-link:hover .masters-social-icon {
+  fill: #ffffff;
+} */
 
 /*-------------------- GALLERY------------------------ */
 
