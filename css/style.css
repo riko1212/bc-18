@@ -488,16 +488,16 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
-.masters-social-icon {
+/* .masters-social-icon {
   fill: currentColor;
-}
+} */
 
 .masters-social-link:hover {
   background-color: var(--accent-color);
-  color: #ffffff;
+  fill: #ffffff;
 }
 
 /* .masters-social-link:hover {
@@ -533,7 +533,13 @@ button {
 }
 
 .contact-wrap {
-  background-color: #303030;
+  background-color: #191c26;
+  background-image: url(../img/contacts-bg.png);
+  background-repeat: no-repeat;
+  background-size: calc(100% / 2 - 15px) 100%;
+  background-position: right;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .contact-wrap .container {
@@ -555,7 +561,8 @@ button {
 .contacts {
   padding-top: 130px;
   padding-bottom: 130px;
-  flex-grow: 1;
+  width: calc(100% / 2 - 15px);
+  padding-left: 100px;
 }
 .contacts-title {
   color: var(--first-title-color);
