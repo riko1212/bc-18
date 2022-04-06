@@ -50,7 +50,6 @@ button {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 1px solid red;
 }
 
 .visually-hidden {
@@ -109,6 +108,7 @@ button {
   background-color: transparent;
   min-width: 160px;
   height: 40px;
+  transition: color 300ms linear, background-color 300ms linear;
 }
 
 .btn:hover {
@@ -118,7 +118,8 @@ button {
 
 /*-------------------- HEADER------------------------ */
 .header {
-  background-color: gray;
+  position: absolute;
+  width: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -143,6 +144,7 @@ button {
   line-height: 1.33;
   letter-spacing: 0.1em;
   color: var(--header-color);
+  transition: color 300ms linear;
 }
 
 .header-link:hover,
@@ -176,8 +178,31 @@ button {
 .hero .container {
   display: flex;
 }
-.hero-list {
+
+.hero-soc {
   width: 93px;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 24px;
+  padding-bottom: 40px;
+}
+.hero-list {
+  display: flex;
+  transform: rotate(-90deg) translate(-19px);
+  transform-origin: top left;
+  align-items: center;
+}
+
+.hero-item + .hero-item {
+  margin-left: 40px;
+}
+
+.hero-list::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
+  margin-right: 40px;
 }
 
 .hero-link {
@@ -186,6 +211,7 @@ button {
   line-height: 1.36;
   letter-spacing: 0.2em;
   color: #303030;
+  transition: color 300ms linear;
 }
 
 .hero-link:hover,
@@ -437,6 +463,32 @@ button {
   /* flex-basis: calc((100% - 90px) / 3); */
   flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
+  position: relative;
+}
+
+.masters-item:hover .masters-top-text {
+  transform: translate(0);
+}
+
+.masters-top-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.masters-top-text {
+  position: absolute;
+  height: 100%;
+  font-size: 18px;
+  top: 0;
+  left: 0;
+  color: #ffffff;
+  line-height: 1.5;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  background-color: rgba(255, 106, 0, 0.718);
+  padding: 40px;
+  transform: translateY(100%);
+  transition: transform 300ms linear;
 }
 
 /* .masters-item + .masters-item {
@@ -626,4 +678,29 @@ button {
   line-height: 1.36;
   letter-spacing: 0.2em;
   color: #303030;
+}
+
+.backdrop {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(48, 48, 48, 0.376);
+  top: 0;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  min-height: 600px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
