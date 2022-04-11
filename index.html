@@ -121,7 +121,10 @@
           </ul>
           <div class="about-content">
             <p class="about-pre-title pre-title">О НАС</p>
-            <h2 class="about-title section-title">
+            <h2
+              class="about-title section-title"
+              title="Перше місце в рейтингу"
+            >
               Лучший Барбершоп твоего города
             </h2>
             <p class="about-after-title after-title">
@@ -424,9 +427,111 @@
         </ul>
       </div>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
-        <button type="button" data-modal-close>X</button>
+        <button type="button" data-modal-close class="modal-close-btn">
+          X
+        </button>
+        <p class="modal-title">Заголовок модального вікна</p>
+        <form class="modal-form">
+          <div class="modal-field">
+            <label class="modal-input-text" for="user-name">Ваше імя</label>
+            <div class="input-wrap">
+              <input
+                type="text"
+                class="modal-input"
+                placeholder="Петро Петренко"
+                required
+                name="user-name"
+                id="user-name"
+              />
+              <svg class="input-icon" width="18" height="18">
+                <use href="./img/icon/symbol-defs.svg#icon-person"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-field">
+            <label for="user-email" class="modal-input-text">Ваша пошта</label>
+            <input
+              type="email"
+              class="modal-input"
+              placeholder="test@mail.com"
+              name="user-email"
+              id="user-email"
+            />
+          </div>
+          <div class="modal-field">
+            <label for="user-tel" class="modal-input-text">Ваш телефон</label>
+            <input
+              type="tel"
+              class="modal-input"
+              placeholder="+38 (096) 111-11-11"
+              required
+              name="user-tel"
+              pattern="[\+]\d{2}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+              title="+38 (096) 111-11-11"
+              id="user-tel"
+              value="+38"
+            />
+          </div>
+          <div class="modal-field">
+            <label for="user-text" class="modal-input-text">Ваш комент</label>
+            <textarea
+              name="user-text"
+              id="user-text"
+              class="modal-comment"
+              placeholder="Комент"
+            ></textarea>
+          </div>
+          <div class="modal-field">
+            <input
+              type="checkbox"
+              class="modal-check"
+              id="modal-check"
+              name="privacy"
+            />
+            <label for="modal-check" class="check-text">
+              <span>
+                <svg class="check-icon" width="13" height="13">
+                  <use href="./img/icon/symbol-defs.svg#icon-check"></use>
+                </svg>
+              </span>
+              Політика користування</label
+            >
+          </div>
+          <!-- <fieldset>
+            <legend>Size</legend>
+            <label for="big-size">Big</label>
+            <input
+              type="radio"
+              id="big-size"
+              name="size"
+              value="big-size"
+              checked
+            />
+            <label for="small-size">Small</label>
+            <input
+              type="radio"
+              id="small-size"
+              name="size"
+              value="small-size"
+            />
+          </fieldset>
+          <fieldset>
+            <legend>Add</legend>
+            <label for="cheeze">cheeze</label>
+            <input
+              type="checkbox"
+              id="cheeze"
+              name="add"
+              value="cheeze"
+              checked
+            />
+            <label for="peperoni">peperoni</label>
+            <input type="checkbox" id="peperoni" name="add" value="peperoni" />
+          </fieldset> -->
+          <button type="submit">submit</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
