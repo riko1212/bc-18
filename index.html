@@ -374,7 +374,39 @@
         <div class="container">
           <section class="online">
             <h2 class="section-title online-title">Онлайн-запись</h2>
+            <form action="online-form">
+              <div class="online-inputs">
+                <div class="online-input-wrap">
+                  <input
+                    type="text"
+                    class="online-input"
+                    id="online-name"
+                    name="online-name"
+                  />
+                  <label for="online-name" class="oline-label">Имя*</label>
+                </div>
+                <div class="online-input-wrap">
+                  <input
+                    type="text"
+                    class="online-input"
+                    id="online-tel"
+                    name="online-tel"
+                  />
+                  <label for="online-tel" class="oline-label">Телефон*</label>
+                </div>
+              </div>
+              <div class="online-input-wrap-text">
+                <textarea
+                  name="online-text"
+                  id="online-text"
+                  class="online-text"
+                ></textarea>
+                <label for="online-text" class="oline-label">Сообщение</label>
+              </div>
+              <button type="submit" class="online-btn btn">отправить</button>
+            </form>
           </section>
+
           <section class="contacts">
             <h2 class="section-title contacts-title">Контакты</h2>
             <address class="contacts-address">
@@ -427,7 +459,7 @@
         </ul>
       </div>
     </footer>
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" data-modal-close class="modal-close-btn">
           X
