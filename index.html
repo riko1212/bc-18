@@ -486,16 +486,17 @@
           <div class="modal-field">
             <input
               type="checkbox"
-              class="modal-check"
+              class="modal-check visually-hidden"
               id="modal-check"
               name="privacy"
             />
             <label for="modal-check" class="check-text">
-              <span>
+              <span></span>
+              <!-- <span>
                 <svg class="check-icon" width="13" height="13">
                   <use href="./img/icon/symbol-defs.svg#icon-check"></use>
                 </svg>
-              </span>
+              </span> -->
               Політика користування</label
             >
           </div>
@@ -530,6 +531,12 @@
             <label for="peperoni">peperoni</label>
             <input type="checkbox" id="peperoni" name="add" value="peperoni" />
           </fieldset> -->
+          <label for="city">city</label>
+          <select name="city" id="city" multiple class="modal-input">
+            <option value="london">London</option>
+            <option value="london">Paris</option>
+            <option value="london">Novyi Rozdil</option>
+          </select>
           <button type="submit">submit</button>
         </form>
       </div>
