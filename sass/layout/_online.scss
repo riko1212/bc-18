@@ -1,0 +1,82 @@
+.online {
+  padding-top: 130px;
+  padding-bottom: 130px;
+  flex-grow: 1;
+  padding-right: 40px;
+}
+.online-title {
+  color: var(--first-title-color);
+  margin-bottom: 44px;
+}
+
+.online-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 44px;
+}
+
+.online-input-wrap {
+  width: 270px;
+  position: relative;
+}
+
+.online-input-wrap:last-child {
+  width: 260px;
+}
+
+.online-input {
+  width: 100%;
+  height: 24px;
+  color: #ffffff;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  outline: none;
+}
+
+.oline-label {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0%;
+  transition: top 300ms linear;
+}
+
+.online-input:focus {
+  border-color: #ffffff;
+}
+
+.online-input:focus + .oline-label {
+  color: #ffffff;
+  top: -100%;
+}
+
+.online-input-wrap-text {
+  width: 100%;
+  position: relative;
+  margin-bottom: 44px;
+}
+.online-text {
+  width: 100%;
+  height: 76px;
+  color: #ffffff;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  outline: none;
+  resize: none;
+}
+
+.online-text:focus + .oline-label {
+  color: #ffffff;
+  top: -30px;
+}
+
+.online-btn {
+  color: var(--first-btn-color);
+}

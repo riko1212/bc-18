@@ -1,0 +1,123 @@
+.masters {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.masters__title {
+  color: #303030;
+  margin-bottom: 44px;
+}
+.masters__pre-title {
+  margin-bottom: var(--typical-mb);
+}
+
+.masters__pre-title::before {
+  background-color: currentColor;
+}
+
+.masters-list {
+  display: flex;
+  margin-left: -30px;
+  flex-wrap: wrap;
+}
+
+.masters-list__item {
+  /* flex-basis: calc((100% - 90px) / 3); */
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  position: relative;
+}
+
+.masters-list__item:hover .masters-list__top-text {
+  transform: translate(0);
+}
+
+.masters-list__top-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.masters-list__top-text {
+  position: absolute;
+  height: 100%;
+  font-size: 18px;
+  top: 0;
+  left: 0;
+  color: #ffffff;
+  line-height: 1.5;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  background-color: rgba(255, 106, 0, 0.718);
+  padding: 40px;
+  transform: translateY(100%);
+  transition: transform 300ms linear;
+}
+
+/* .masters-item + .masters-item {
+  margin-left: 30px;
+} */
+
+.masters-list__title {
+  color: var(--second-title-color);
+  margin-bottom: 44px;
+}
+
+.masters-list__item-wrap {
+  padding-top: 30px;
+}
+
+.masters-list__item-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(25 / 18);
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #303030;
+  margin-bottom: 8px;
+}
+
+.masters-list__item-text {
+  font-size: 14px;
+  line-height: calc(19 / 14);
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #ff6c00;
+  margin-bottom: 30px;
+}
+
+.socials-list {
+  display: flex;
+  justify-content: center;
+}
+
+.socials-list__item + .socials-list__item {
+  margin-left: 10px;
+}
+
+.socials-list__link {
+  width: 44px;
+  height: 44px;
+  background-color: teal;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--accent-color);
+}
+
+/* .masters-social-icon {
+  fill: currentColor;
+} */
+
+.socials-list__link:hover {
+  background-color: var(--accent-color);
+  fill: #ffffff;
+}
+
+/* .masters-social-link:hover {
+  background-color: var(--accent-color);
+}
+
+.masters-social-link:hover .masters-social-icon {
+  fill: #ffffff;
+} */
