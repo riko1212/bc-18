@@ -1,10 +1,9 @@
 .about {
   padding-top: 140px;
   padding-bottom: 121px;
-}
-
-.about .container {
-  display: flex;
+  .container {
+    display: flex;
+  }
 }
 
 .about-list {
@@ -16,8 +15,10 @@
   margin-bottom: var(--typical-mb);
 }
 
-.about-list__item + .about-list__item {
-  margin-left: 30px;
+.about-list__item {
+  & + & {
+    margin-left: 30px;
+  }
 }
 
 .about-content__title {

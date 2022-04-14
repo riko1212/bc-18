@@ -3,15 +3,13 @@
   width: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
+  .container {
+    @extend %align-list;
+  }
 }
 
 .header__logo {
   margin-right: 70px;
-}
-
-.header > .container {
-  display: flex;
-  align-items: center;
 }
 
 .menu-list {
@@ -26,11 +24,10 @@
   letter-spacing: 0.1em;
   color: var(--header-color);
   transition: color 300ms linear;
-}
-
-.menu-list__link:hover,
-.menu-list__link:active {
-  color: var(--accent-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .connect {

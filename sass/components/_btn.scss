@@ -12,9 +12,8 @@
   border-radius: 25px;
   background-color: transparent;
   transition: color 300ms linear, background-color 300ms linear;
-}
-
-.btn:hover {
-  background-color: var(--accent-color);
-  color: var(--first-btn-color);
+  &:hover {
+    background-color: var(--accent-color);
+    color: var(--first-btn-color);
+  }
 }

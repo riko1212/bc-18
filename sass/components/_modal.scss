@@ -6,6 +6,12 @@
   top: 0;
 }
 
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
 .modal {
   position: absolute;
   top: 50%;
@@ -18,19 +24,12 @@
   padding: 40px;
 }
 
-.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-}
-
 .modal-close-btn {
   width: 30px;
   height: 30px;
   border: 1px solid #999999;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
+  @extend %align-list;
   justify-content: center;
   position: absolute;
   top: 10px;
@@ -55,6 +54,12 @@
   border-radius: 3px;
   padding-left: 30px;
   outline: none;
+  &:focus {
+    border-color: var(--accent-color);
+  }
+  &::placeholder {
+    color: purple;
+  }
 }
 
 .input-icon {
@@ -62,18 +67,9 @@
   left: 8px;
   top: 50%;
   transform: translateY(-50%);
-}
-
-.modal-input:focus {
-  border-color: var(--accent-color);
-}
-
-.modal-input:focus + .input-icon {
-  fill: var(--accent-color);
-}
-
-.modal-input::placeholder {
-  color: purple;
+  .modal-input:focus + & {
+    fill: var(--accent-color);
+  }
 }
 
 .modal-title {
@@ -105,35 +101,31 @@
 .check-text {
   font-size: 14px;
   color: #555555;
-  display: flex;
-  align-items: center;
+  @extend %align-list;
   position: relative;
-}
-
-.check-text::before {
-  content: "";
-  width: 40px;
-  height: 8px;
-  border: 1px solid #999999;
-  border-radius: 50px;
-  margin-right: 10px;
-}
-
-.check-text::after {
-  content: "";
-  position: absolute;
-  left: 3px;
-  top: 2px;
-  width: 18px;
-  height: 18px;
-  background-color: #e0dada;
-  border-radius: 50%;
-  transition: transform 300ms;
-}
-
-.modal-check:checked + .check-text::after {
-  transform: translate(16px);
-  background-color: #d9f1c3;
+  &::before {
+    content: "";
+    width: 40px;
+    height: 8px;
+    border: 1px solid #999999;
+    border-radius: 50px;
+    margin-right: 10px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 2px;
+    width: 18px;
+    height: 18px;
+    background-color: #e0dada;
+    border-radius: 50%;
+    transition: transform 300ms;
+    .modal-check:checked + & {
+      transform: translate(16px);
+      background-color: #d9f1c3;
+    }
+  }
 }
 
 /* .check-text span {
