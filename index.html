@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container">
         <a href="" class="header__logo logo animate__animated animate__bounce">
           <img src="./img/logo.svg" alt="лого сайта" />
@@ -55,8 +55,68 @@
             онлайн-запись
           </button>
         </div>
+        <button type="button" class="menu-open-btn">
+          <span></span>
+        </button>
       </div>
-    </header> -->
+      <div class="mob-menu is-hidden">
+        <div class="container">
+          <div class="mob-menu-top">
+            <button type="button" class="menu-close-btn"><span></span></button>
+            <nav class="mob-menu-navigation">
+              <ul class="mob-menu-list list">
+                <li class="mob-menu-list__item">
+                  <a href="" class="mob-menu-list__link link">О нас</a>
+                </li>
+                <li class="mob-menu-list__item">
+                  <a href="" class="mob-menu-list__link link">Услуги и цены</a>
+                </li>
+                <li class="mob-menu-list__item">
+                  <a href="" class="mob-menu-list__link link">Мастера</a>
+                </li>
+                <li class="mob-menu-list__item">
+                  <a href="" class="mob-menu-list__link link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="mob-menu-bottom">
+            <div class="mob-menu-connect">
+              <a href="tel:+380441111111" class="mob-menu-connect__tel link"
+                >+38 044 111 11 11</a
+              >
+              <button
+                type="button"
+                class="mob-menu-connect__btn btn"
+                data-modal-open
+              >
+                онлайн-запись
+              </button>
+            </div>
+            <ul class="mob-menu-soc list">
+              <li class="mob-menu-soc__item">
+                <a
+                  href=""
+                  target="_blank"
+                  class="mob-menu-soc__link link"
+                  rel="noopener noreferrer nofollow"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mob-menu-soc__item">
+                <a
+                  href=""
+                  target="_blank"
+                  class="mob-menu-soc__link link"
+                  rel="noopener noreferrer nofollow"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
     <main>
       <section class="hero">
         <div class="container">
@@ -573,5 +633,6 @@
       </div>
     </div> -->
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

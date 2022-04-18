@@ -3,7 +3,7 @@
   width: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
-  .container {
+  & > .container {
     @extend %align-list;
   }
 }
@@ -31,7 +31,12 @@
 }
 
 .connect {
+  display: none;
   margin-left: auto;
+}
+
+.navigation {
+  display: none;
 }
 
 /* .header-tel {
@@ -49,4 +54,113 @@
 
 .menu-list__item:not(:last-child) {
   margin-right: 40px;
+}
+
+.menu-open-btn,
+.menu-close-btn {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  display: block;
+  margin-left: auto;
+}
+
+.menu-open-btn span,
+.menu-close-btn span {
+  width: 24px;
+  height: 3px;
+  display: block;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.menu-open-btn span::after,
+.menu-open-btn span::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  left: 0;
+}
+
+.menu-close-btn span {
+  background-color: #000000;
+  transform: rotate(45deg);
+}
+.menu-close-btn span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #000000;
+  left: 0;
+  transform: rotate(-90deg);
+}
+
+.menu-open-btn span::after {
+  top: 7px;
+}
+.menu-open-btn span::before {
+  bottom: 7px;
+}
+
+.menu-close-btn {
+  margin-bottom: 30px;
+}
+
+.mob-menu {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+}
+
+.mob-menu-list__item,
+.mob-menu-soc__item {
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+
+.mob-menu-list__link,
+.mob-menu-connect__tel {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #303030;
+}
+
+.mob-menu-connect {
+  margin-bottom: 64px;
+}
+
+.mob-menu-connect__btn {
+  display: block;
+  margin-top: 24px;
+}
+
+.mob-menu-soc__link {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  /* identical to box height */
+
+  letter-spacing: 0.2em;
+
+  color: #303030;
 }
